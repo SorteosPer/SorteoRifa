@@ -84,9 +84,11 @@ footer{text-align:center;padding:25px;color:#7a879b;font-size:13px}
 <script>
 const selected=new Set();
 const grid=document.getElementById('tickets');
+const soldNumbers=new Map([[7,'Fiorella'],[77,'Fiorella'],[14,'Fredy Huanca'],[17,'Wemmer'],[84,'Rocio'],[75,'Lupe']]);
 for(let n=1;n<=200;n++){
  const b=document.createElement('button');b.className='ticket';b.textContent=n;b.type='button';b.setAttribute('aria-label','Número '+n);
- if(n===75){b.classList.add('sold');b.disabled=true;b.title='Lupe';b.setAttribute('aria-label','Número 75, vendido a Lupe')}
+ const owner=soldNumbers.get(n);
+ if(owner){b.classList.add('sold');b.disabled=true;b.title=owner;b.setAttribute('aria-label','Número '+n+', vendido a '+owner)}
  else{b.onclick=()=>{if(selected.has(n)){selected.delete(n);b.classList.remove('selected')}else{selected.add(n);b.classList.add('selected')}update();};}
  grid.appendChild(b);
 }
