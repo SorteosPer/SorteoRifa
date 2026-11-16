@@ -17,7 +17,14 @@ h1{font-size:clamp(48px,8vw,90px);line-height:.85;margin:12px 0 22px;letter-spac
 h1 .gran{display:block;color:#fff;text-shadow:0 4px 0 #15396d,0 8px 18px #0005}
 h1 .rifa{display:block;color:var(--gold2);font-style:italic;text-shadow:0 3px 0 #a56800,0 8px 18px #0006}
 .subtitle{font-size:clamp(18px,2.6vw,26px);font-weight:700;line-height:1.25;max-width:540px}
-.prize-pill{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(110deg,#ffe68a,#f6b719,#ffdc69);color:#08265a;padding:12px 24px;border-radius:999px;font-weight:900;font-size:clamp(20px,3vw,30px);box-shadow:0 5px 0 #a66a00;margin-top:20px}
+.prize-podium{display:flex;align-items:flex-end;gap:10px;margin-top:24px;max-width:560px}
+.prize-card{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px 6px;border:1px solid #ffffff55;border-radius:16px 16px 8px 8px;color:#08265a;text-align:center;box-shadow:0 5px 0 #0003}
+.prize-card.first{order:2;height:132px;background:linear-gradient(145deg,#fff0a9,#f6b719);border-color:#ffe68a}
+.prize-card.second{order:1;height:108px;background:linear-gradient(145deg,#f8fbff,#cbd5e1);border-color:#fff}
+.prize-card.third{order:3;height:92px;background:linear-gradient(145deg,#ffd9b0,#c98245);border-color:#ffe0bd}
+.prize-medal{font-size:23px;line-height:1}
+.prize-name{font-size:clamp(12px,1.5vw,15px);font-weight:800}
+.prize-amount{font-size:clamp(15px,2vw,21px);font-weight:950;white-space:nowrap}
 .products{width:100%;max-width:560px;margin:auto}
 .products img{display:block;width:100%;height:clamp(320px,40vw,450px);object-fit:contain;background:transparent;padding:0;filter:drop-shadow(0 8px 8px #0002)}
 .ticket-cost{display:flex;align-items:center;gap:18px;font-size:16px;font-weight:700}
@@ -57,7 +64,11 @@ footer{text-align:center;padding:25px;color:#7a879b;font-size:13px}
    <div>
     <h1><span class="gran">Gran</span><span class="rifa">Rifa</span></h1>
     <div class="subtitle">¡Te puedes ganar un electrodoméstico o su valor en efectivo!</div>
-    <div class="prize-pill">💰 S/ 550.00 en efectivo</div>
+    <div class="prize-podium" aria-label="Premios de la rifa">
+     <div class="prize-card first"><span class="prize-medal">🥇</span><span class="prize-name">Primer premio</span><span class="prize-amount">S/ 550.00</span></div>
+     <div class="prize-card second"><span class="prize-medal">🥈</span><span class="prize-name">Segundo premio</span><span class="prize-amount">S/ 250.00</span></div>
+     <div class="prize-card third"><span class="prize-medal">🥉</span><span class="prize-name">Tercer premio</span><span class="prize-amount">S/ 100.00</span></div>
+    </div>
     <div class="facts"><div class="fact ticket-cost">🎟️ Costo del boleto <b>S/ 10.00</b></div></div>
    </div>
    <div class="products">
