@@ -95,7 +95,7 @@ footer{text-align:center;padding:25px;color:#7a879b;font-size:13px}
 <script>
 const selected=new Set();
 const grid=document.getElementById('tickets');
-const soldNumbers=new Map([[7,'Fiorella'],[77,'Fiorella'],[14,'Fredy Huanca'],[17,'Wemmer'],[84,'Rocio'],[75,'Lupe']]);
+const soldNumbers=new Map([[7,'Fiorella'],[77,'Fiorella'],[14,'Fredy Huanca'],[17,'Wemmer'],[84,'Rocio'],[75,'Lupe'],[2,'Jorge Z.'],[12,'Jorge Z.'],[22,'Jorge Z.'],[32,'Jorge Z.'],[42,'Jorge Z.'],[35,'Lourdes A.'],[55,'Lourdes A.']]);
 for(let n=1;n<=200;n++){
  const b=document.createElement('button');b.className='ticket';b.textContent=n;b.type='button';b.setAttribute('aria-label','Número '+n);
  const owner=soldNumbers.get(n);
